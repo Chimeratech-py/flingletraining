@@ -16,9 +16,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
+
+    
     [Authorize]
     public class UsersController : BaseApiController
     {
+
         private readonly IMapper _mapper;
         private readonly IPhotoService _photoService;
         private readonly IUnitOfWork _unitOfWork;
@@ -96,7 +99,7 @@ namespace API.Controllers
             }
 
 
-            return BadRequest("Problem addding photo");
+            return BadRequest("Problem adding photo");
         }
 
         [HttpPut("set-main-photo/{photoId}")]

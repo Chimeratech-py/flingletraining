@@ -51,7 +51,9 @@
     </form>
 </div>
 
+<!-- The ngFor directive loops over the list of members from the local variable -->
 <div class="row">
+
     <div *ngFor="let member of members" class="col-2">
         <app-member-card [member]="member"></app-member-card>
     </div>
@@ -68,5 +70,5 @@
         nextText="&rsaquo;" 
         firstText="&laquo;" 
         lastText="&raquo;">
-</pagination>
+    </pagination>
 </div>
